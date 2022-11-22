@@ -6,6 +6,7 @@ local servers = {
 	"tsserver",
     "clangd",
     "jdtls",
+	"tailwindcss"
 }
 
 local settings = {
