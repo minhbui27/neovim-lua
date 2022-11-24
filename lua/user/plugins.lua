@@ -83,7 +83,7 @@ return packer.startup(function(use)
   }
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
-  --
+  -- Nvim tree
   use {
   'nvim-tree/nvim-tree.lua',
   requires = {
@@ -91,6 +91,18 @@ return packer.startup(function(use)
   },
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+
+	-- lualine (the statusline on the bottom)
+	use {
+  'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+
+	-- bufferline
+	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
+	-- Make nvim background transparent
+	use "xiyaowong/nvim-transparent"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

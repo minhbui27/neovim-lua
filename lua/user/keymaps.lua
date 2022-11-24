@@ -49,3 +49,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Keymaps for nvim tree
 keymap("n", "<C-f>", ":NvimTreeToggle <CR>", opts)
 keymap("n", "<C-n>", ":NvimTreeFocus <CR>", opts)
+
+-- Keymaps for bufferline navigation
+keymap("n", "<C-p>", ":BufferLinePick <CR>", opts)
+keymap("n", "<A-.>", ":BufferLineCycleNext <CR>", opts)
+keymap("n", "<A-,>", ":BufferLineCyclePrev <CR>", opts)
