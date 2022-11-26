@@ -54,3 +54,7 @@ keymap("n", "<C-n>", ":NvimTreeFocus <CR>", opts)
 keymap("n", "<C-p>", ":BufferLinePick <CR>", opts)
 keymap("n", "<A-.>", ":BufferLineCycleNext <CR>", opts)
 keymap("n", "<A-,>", ":BufferLineCyclePrev <CR>", opts)
+keymap("n", "<A-c>", ":BufferLineCyclePrev <CR> :BufferLineCloseRight <CR>", opts)
+
+-- Formatting with lsp and null-ls
+keymap("n", "<leader>f", ":lua vim.lsp.buf.format() <CR>", opts)
