@@ -119,6 +119,15 @@ return packer.startup(function(use)
 
 	-- startify
 	use("mhinz/vim-startify")
+
+	-- Autopairing and surround
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
