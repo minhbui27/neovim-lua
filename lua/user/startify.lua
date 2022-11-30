@@ -17,7 +17,7 @@ vim.g.startify_lists = {
 vim.cmd([[
 let g:startify_bookmarks = [
             \ { 'f': '~/src/f22/' },
-            \ { 'a': '~/src/astro-gauchoracing' },
+            \ { 'a': '~/src/sae/astro-gauchoracing/' },
             \ { 'b': '~/.bashrc' },
             \ { 'c': '~/.config/' },
             \ { 'i': '~/.config/nvim/init.lua' },
