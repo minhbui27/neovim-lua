@@ -128,6 +128,10 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- Installing the one half dark and light themes
+	use({ "sonph/onehalf", rtp = '/vim' })
+	vim.cmd([[set t_Co=256]])
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

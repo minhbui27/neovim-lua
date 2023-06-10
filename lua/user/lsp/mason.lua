@@ -1,12 +1,14 @@
 -- servers that needs to be setup
 local servers = {
-	"sumneko_lua",
+	"lua_ls",
 	"pyright",
 	"jsonls",
 	"tsserver",
-    "clangd",
-    "jdtls",
-	"tailwindcss"
+	"clangd",
+	"jdtls",
+	"tailwindcss",
+	"rust_analyzer",
+	"astro",
 }
 
 local settings = {
