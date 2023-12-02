@@ -161,6 +161,11 @@ _G.packer_plugins = {
     path = "/home/minhb/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-sshfs"] = {
+    loaded = true,
+    path = "/home/minhb/.local/share/nvim/site/pack/packer/start/nvim-sshfs",
+    url = "https://github.com/DanielWeidinger/nvim-sshfs"
+  },
   ["nvim-transparent"] = {
     loaded = true,
     path = "/home/minhb/.local/share/nvim/site/pack/packer/start/nvim-transparent",

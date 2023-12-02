@@ -58,3 +58,7 @@ keymap("n", "<A-c>", ":BufferLineCyclePrev <CR> :BufferLineCloseRight <CR>", opt
 
 -- Formatting with lsp and null-ls
 keymap("n", "<leader>f", ":lua vim.lsp.buf.format() <CR>", opts)
+
+-- Center center of screen when C-u C-d jumping
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
