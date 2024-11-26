@@ -1,5 +1,6 @@
 local options = {
   backup = false,
+	number = true,
   relativenumber = true,
   autoindent = true,
   tabstop = 2,
