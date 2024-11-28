@@ -113,7 +113,7 @@ return packer.startup(function(use)
 	-- Telescope fuzzyfinder
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+		tag = "0.1.4",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
@@ -127,6 +127,21 @@ return packer.startup(function(use)
 			require("nvim-autopairs").setup({})
 		end,
 	})
+	-- vimTex
+	use({
+		"lervag/vimtex",
+		lazy = "false ",
+		config = function()
+		end,
+	})
+	-- vimTex-fold
+	use({
+		"matze/vim-tex-fold",
+		config = function()
+		end,
+	})
+	-- SSHFS for remote
+	use("DanielWeidinger/nvim-sshfs")
 
 	-- Installing the one half dark and light themes
 	use({ "sonph/onehalf", rtp = '/vim' })
