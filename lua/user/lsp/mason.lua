@@ -1,5 +1,6 @@
 -- servers that needs to be setup
 local servers = {
+	"lua_ls",
 	"pyright",
 	"jsonls",
 	"tsserver",
