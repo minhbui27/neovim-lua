@@ -71,6 +71,7 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
+		tag = "v0.9.3"
 	})
 	use("p00f/nvim-ts-rainbow")
 
@@ -89,7 +90,9 @@ return packer.startup(function(use)
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- optional, for file icons
 		},
-		-- tag = "nightly", -- optional, updated every week. (see issue #1193)
+		-- config = function ()
+		-- 	require("nvim-tree").setup{}
+		-- end
 	})
 
 	-- lualine (the statusline on the bottom)

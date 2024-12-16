@@ -11,7 +11,7 @@ local options = {
   hlsearch = true,
   scrolloff = 8,
   swapfile = false,
-  termguicolors = true,
+  termguicolors = false,
   updatetime = 300	--Faster completion,
 }
 
