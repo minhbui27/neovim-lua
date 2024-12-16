@@ -3,7 +3,7 @@ local servers = {
 	"lua_ls",
 	"pyright",
 	"jsonls",
-	"tsserver",
+	"ts_ls",
 	"clangd",
 	"jdtls",
 	"tailwindcss",

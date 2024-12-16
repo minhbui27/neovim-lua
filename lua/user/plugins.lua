@@ -89,7 +89,7 @@ return packer.startup(function(use)
 		requires = {
 			"nvim-tree/nvim-web-devicons", -- optional, for file icons
 		},
-		tag = "nightly", -- optional, updated every week. (see issue #1193)
+		-- tag = "nightly", -- optional, updated every week. (see issue #1193)
 	})
 
 	-- lualine (the statusline on the bottom)
@@ -99,7 +99,7 @@ return packer.startup(function(use)
 	})
 
 	-- bufferline
-	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
+	use({ "akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- Make nvim background transparent
 	use("xiyaowong/nvim-transparent")
@@ -131,20 +131,18 @@ return packer.startup(function(use)
 	use({
 		"lervag/vimtex",
 		lazy = "false ",
-		config = function()
-		end,
+		config = function() end,
 	})
 	-- vimTex-fold
 	use({
 		"matze/vim-tex-fold",
-		config = function()
-		end,
+		config = function() end,
 	})
 	-- SSHFS for remote
 	use("DanielWeidinger/nvim-sshfs")
 
 	-- Installing the one half dark and light themes
-	use({ "sonph/onehalf", rtp = '/vim' })
+	use({ "sonph/onehalf", rtp = "/vim" })
 	vim.cmd([[set t_Co=256]])
 
 	-- Automatically set up your configuration after cloning packer.nvim
