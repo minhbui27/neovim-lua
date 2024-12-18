@@ -71,7 +71,7 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		tag = "v0.9.3"
+		tag = "v0.9.3",
 	})
 	use("p00f/nvim-ts-rainbow")
 
@@ -143,6 +143,11 @@ return packer.startup(function(use)
 	})
 	-- SSHFS for remote
 	use("DanielWeidinger/nvim-sshfs")
+
+	-- CSV viewer
+	use({
+		"hat0uma/csvview.nvim",
+	})
 
 	-- Installing the one half dark and light themes
 	use({ "sonph/onehalf", rtp = "/vim" })

@@ -7,8 +7,8 @@ local servers = {
 	"clangd",
 	"jdtls",
 	"tailwindcss",
-	"rust_analyzer"
-	-- "verible"
+	"rust_analyzer",
+	"verible"
 }
 
 local settings = {
