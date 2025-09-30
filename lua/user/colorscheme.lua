@@ -6,3 +6,5 @@ if not status_ok then
 	return
 end
 
+vim.o.background = "dark"
+

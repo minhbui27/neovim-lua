@@ -47,6 +47,7 @@ return packer.startup(function(use)
 
 	-- Colorschemes
 	use("flazz/vim-colorschemes") -- Colorscheme for vim
+	use ("ellisonleao/gruvbox.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
@@ -65,7 +66,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/mason.nvim") -- simple to use language server installer
 	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
-	use("jose-elias-alvarez/null-ls.nvim")
+	use("nvimtools/none-ls.nvim")
 
 	-- Treesitter
 	use({
