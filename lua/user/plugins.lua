@@ -72,9 +72,8 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		tag = "v0.9.3",
 	})
-	use("p00f/nvim-ts-rainbow")
+	use("HiPhish/rainbow-delimiters.nvim")
 
 	-- Commentary
 	use({
@@ -117,7 +116,7 @@ return packer.startup(function(use)
 	-- Telescope fuzzyfinder
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.4",
+		branch = "master",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 

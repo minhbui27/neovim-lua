@@ -23,10 +23,10 @@ nvim_tree.setup {
     diagnostics = {
         enable = true,
         icons = {
-            hint = "",
-            info = "",
-            warning = "",
-            error = "",
+            hint = "󰌶",
+            info = "",
+            warning = "",
+            error = "",
         },
     },
     update_focused_file = {
@@ -56,23 +56,23 @@ nvim_tree.setup {
                 git = true,
             },
             glyphs = {
-                default = "",
-                symlink = "",
+                default = "",
+                symlink = "",
                 git = {
-                    unstaged = "",
-                    staged = "S",
-                    unmerged = "",
+                    unstaged = "✗",
+                    staged = "✓",
+                    unmerged = "",
                     renamed = "➜",
-                    deleted = "",
-                    untracked = "U",
+                    deleted = "",
+                    untracked = "★",
                     ignored = "◌",
                 },
                 folder = {
-                    default = "",
-                    open = "",
-                    empty = "",
-                    empty_open = "",
-                    symlink = "",
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
                 },
             }
         }
