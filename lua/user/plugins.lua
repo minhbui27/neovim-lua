@@ -149,6 +149,12 @@ return packer.startup(function(use)
 		"hat0uma/csvview.nvim",
 	})
 
+	-- Better folds
+	use({
+		"kevinhwang91/nvim-ufo",
+		requires = "kevinhwang91/promise-async",
+	})
+
 	-- Installing the one half dark and light themes
 	use({ "sonph/onehalf", rtp = "/vim" })
 	vim.cmd([[set t_Co=256]])

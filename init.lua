@@ -1,3 +1,7 @@
+-- Compatibility shim for deprecated function (packer.nvim uses it)
+vim.tbl_islist = vim.islist
+
+require "user.rainbow-delimiters" -- must be before plugins load
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -15,3 +19,4 @@ require "user.startify"
 require "user.autopairs"
 require "user.hex_editor"
 require "user.csvview"
+require "user.ufo"

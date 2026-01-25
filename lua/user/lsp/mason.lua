@@ -1,4 +1,4 @@
--- servers that needs to be setup
+-- servers that needs to be setup (lspconfig names)
 local servers = {
 	"lua_ls",
 	"pyright",
@@ -8,7 +8,20 @@ local servers = {
 	"jdtls",
 	"tailwindcss",
 	"rust_analyzer",
-	"verible"
+	"verible_verilog_ls",
+}
+
+-- mason-lspconfig names (for ensure_installed)
+local mason_servers = {
+	"lua_ls",
+	"pyright",
+	"jsonls",
+	"ts_ls",
+	"clangd",
+	"jdtls",
+	"tailwindcss",
+	"rust_analyzer",
+	-- verible is installed separately via :MasonInstall verible
 }
 
 local settings = {
@@ -26,7 +39,7 @@ local settings = {
 
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
-	ensure_installed = servers,
+	ensure_installed = mason_servers,
 	automatic_installation = true,
 })
 
@@ -44,4 +57,5 @@ for _, server in pairs(servers) do
 	end
 
 	vim.lsp.config[server] = opts
+	vim.lsp.enable(server)
 end
