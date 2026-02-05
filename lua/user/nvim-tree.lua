@@ -21,13 +21,7 @@ nvim_tree.setup {
         auto_open = true,
     },
     diagnostics = {
-        enable = true,
-        icons = {
-            hint = "󰌶",
-            info = "",
-            warning = "",
-            error = "",
-        },
+        enable = false,
     },
     update_focused_file = {
         enable = true,

@@ -56,8 +56,26 @@ keymap("n", "<A-.>", ":BufferLineCycleNext <CR>", opts)
 keymap("n", "<A-,>", ":BufferLineCyclePrev <CR>", opts)
 keymap("n", "<A-c>", ":BufferLineCyclePrev <CR> :BufferLineCloseRight <CR>", opts)
 
--- Formatting with lsp and null-ls
-keymap("n", "<leader>f", ":lua vim.lsp.buf.format() <CR>", opts)
+-- Keymaps for tab navigation
+keymap("n", "<A-S-Right>", ":tabnext<CR>", opts)
+keymap("n", "<A-S-Left>", ":tabprevious<CR>", opts)
+
+-- Formatting with lsp and null-ls (re-attach treesitter/rainbow after)
+vim.keymap.set("n", "<leader>f", function()
+	vim.lsp.buf.format()
+	-- Re-attach treesitter and rainbow after format
+	vim.schedule(function()
+		local buf = vim.api.nvim_get_current_buf()
+		local ft = vim.bo[buf].filetype
+		if ft ~= "systemverilog" and ft ~= "verilog" then
+			pcall(vim.treesitter.start)
+		end
+		local rd_ok, rd_lib = pcall(require, "rainbow-delimiters.lib")
+		if rd_ok then
+			rd_lib.attach(buf)
+		end
+	end)
+end, opts)
 
 -- Center center of screen when C-u C-d jumping
 keymap("n", "<C-d>", "<C-d>zz", opts)

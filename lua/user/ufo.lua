@@ -5,7 +5,21 @@ end
 
 ufo.setup({
 	provider_selector = function(bufnr, filetype, buftype)
+		if filetype == "verilog" or filetype == "systemverilog" then
+			return { "treesitter", "indent" }
+		end
 		return ""  -- disable automatic fold providers, use manual folds
+	end,
+	open_fold_hl_timeout = 0,
+})
+
+-- Start with all folds open for Verilog/SystemVerilog
+vim.api.nvim_create_autocmd("BufWinEnter", {
+	pattern = { "*.v", "*.sv", "*.svh", "*.vh" },
+	callback = function()
+		vim.schedule(function()
+			ufo.openAllFolds()
+		end)
 	end,
 })
 
